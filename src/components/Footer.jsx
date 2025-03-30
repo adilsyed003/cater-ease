@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -48,36 +49,36 @@ const Footer = () => {
                                     <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Quick Links</span>
                                     <ul className="list-unstyled">
                                         <li>
-                                            <a
+                                            <Link
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                                href="#about"
+                                                to="/about"
                                             >
                                                 About Us
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
+                                            <Link
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                                href="#services"
+                                                to="/services"
                                             >
                                                 Our Services
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
+                                            <Link
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                                href="#contact"
+                                                to="/about"
                                             >
                                                 Contact Us
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
+                                            <Link
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                                href="#testimonials"
+                                                to="/about"
                                             >
                                                 Testimonials
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -85,36 +86,36 @@ const Footer = () => {
                                     <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Resources</span>
                                     <ul className="list-unstyled">
                                         <li>
-                                            <a
+                                            <Link
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                                href="#faq"
+                                                to="/about"
                                             >
                                                 FAQ
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
+                                            <Link
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                                href="#terms"
+                                                to="/about"
                                             >
                                                 Terms & Conditions
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
+                                            <Link
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                                href="#privacy"
+                                                to="/about"
                                             >
                                                 Privacy Policy
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
+                                            <Link
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                                href="#support"
+                                                to="/about"
                                             >
                                                 Support
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>

@@ -1,8 +1,11 @@
 import './App.css';
+import AboutPage from './components/AboutPage';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Landing from './components/Landing';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ServicesPage from './components/ServicesPage';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <hr className="border-t-2 border-gray-300 w-screen" />
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<ServicesPage />} />
 
         </Routes>
         <hr className="my-8 border-t-2 border-gray-300" />
