@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const ServiceDetails = () => {
-    const { id } = useParams(); // Get the dynamic parameter from the URL
+    const { id } = useParams();
     const [service, setService] = useState(null);
 
     useEffect(() => {
         const fetchService = async () => {
             try {
-                const response = await fetch(`http://localhost:8081/items/${id}`); // Fetch data by ID
+                const backendUrl = `${import.meta.env.VITE_BACKEND_URL}/items/${id}`;
+                const response = await fetch(backendUrl);
                 const data = await response.json();
                 setService(data);
             } catch (error) {

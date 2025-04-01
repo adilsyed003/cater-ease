@@ -14,18 +14,24 @@ export default function Selecting() {
     return (
         <select
             onChange={handleSelectChange}
+            defaultValue=""
             className="w-[130px] text-gray-950 border border-gray-300 rounded-md p-2"
         >
-            <option value="" disabled selected>
+            <option value="" disabled >
                 Menu
             </option>
-            <option value="1">Birthday Menu</option>
+            <option value="1">Wedding Event</option>
             <option value="2">Wedding Anniversary</option>
-            <option value="3">Seematham Menu</option>
-            <option value="4">Mehandi Ceremony</option>
-            <option value="5">Reception Menu</option>
-            <option value="6">Engagement Menu</option>
-            <option value="7">Corporate Menu</option>
+            <option value="3">Birthday Party</option>
+            <option value="4">Engagement</option>
+            <option value="5">Seemantham</option>
+            <option value="6">Annaprasana</option>
+            <option value="7">House Warming</option>
+            <option value="8">Corporate Events</option>
+            <option value="9">Mehandi Function</option>
+            <option value="10">Retirement Function</option>
+            <option value="11">Reception Event</option>
+            <option value="12">Haldi Function</option>
         </select>
     );
 }

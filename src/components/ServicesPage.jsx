@@ -7,7 +7,7 @@ const ServicesPage = () => {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await fetch('http://localhost:8081/items');
+                const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/items`);
                 const data = await response.json();
                 setServices(data);
             } catch (error) {
