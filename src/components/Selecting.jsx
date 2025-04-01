@@ -7,7 +7,7 @@ export default function Selecting() {
     const handleSelectChange = (event) => {
         const selectedValue = event.target.value;
         if (selectedValue) {
-            navigate(selectedValue); // Navigate to the selected endpoint
+            navigate(`/service/${selectedValue}`); // Navigate to the dynamic endpoint
         }
     };
 
@@ -19,13 +19,13 @@ export default function Selecting() {
             <option value="" disabled selected>
                 Menu
             </option>
-            <option value="/birthday-menu">Birthday Menu</option>
-            <option value="/wedding-anniversary">Wedding Anniversary</option>
-            <option value="/seematham-menu">Seematham Menu</option>
-            <option value="/mehandi-ceremony">Mehandi Ceremony</option>
-            <option value="/reception-menu">Reception Menu</option>
-            <option value="/engagement-menu">Engagement Menu</option>
-            <option value="/corporate-menu">Corporate Menu</option>
+            <option value="1">Birthday Menu</option>
+            <option value="2">Wedding Anniversary</option>
+            <option value="3">Seematham Menu</option>
+            <option value="4">Mehandi Ceremony</option>
+            <option value="5">Reception Menu</option>
+            <option value="6">Engagement Menu</option>
+            <option value="7">Corporate Menu</option>
         </select>
     );
 }

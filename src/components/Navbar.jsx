@@ -82,7 +82,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
-                                to="/menu"
+
                                 className="block py-2 px-3 md:p-0 text-slate-100 bg-transparent rounded-sm"
                             >
                                 <Selecting />

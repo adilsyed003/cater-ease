@@ -10,6 +10,7 @@ const Services = () => {
     return (
         <div className="flex flex-wrap justify-center items-center gap-8 p-8">
             <Card
+                id="1"
                 image="cater3.jpg"
                 title="Wedding Event"
                 description="
@@ -17,6 +18,7 @@ We have the concept of inviting all our relatives, friends and known ones? Its b
                 buttonText="Read more"
             />
             <Card
+                id="2"
                 image="cater5.jpg"
                 title="Corporate Event"
                 description="
@@ -24,6 +26,7 @@ From corporate events to business occasions or milestone celebrations, our event
                 buttonText="Read more"
             />
             <Card
+                id="3"
                 image="cater4.jpg"
                 title="Birthday Party"
                 description="
@@ -31,7 +34,7 @@ Make every birthday a memorable one with our birthday photography. Whether it’
                 buttonText="Read More"
             />
 
-            <div className=" bottom-4 m-auto ">
+            <div className="  my-2 mx-28 ">
                 <button
                     onClick={handleNavigate}
                     className="bg-black text-white py-3 px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
