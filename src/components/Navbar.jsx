@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 import Selecting from './Selecting';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    const navigate = useNavigate();
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+    const handleLoginClick = () => {
+        navigate('/login'); // Navigate to the Login component
     };
 
     return (
@@ -18,13 +20,13 @@ const Navbar = () => {
                     <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">Cater Ease</span>
                 </Link>
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse text-white bg-black rounded-2xl">
-                    <SignedOut>
-                        <SignInButton mode="modal" />
-                    </SignedOut>
-                    <SignedIn>
-                        <UserButton />
-                    </SignedIn>
-
+                    <button
+                        type="button"
+                        onClick={handleLoginClick} // Navigate to Login
+                        className="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+                    >
+                        Log In
+                    </button>
                     <button
                         onClick={toggleMenu}
                         type="button"
