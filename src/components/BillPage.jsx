@@ -47,20 +47,20 @@ const BillPage = () => {
         let yPosition = 40;
         service.dishes.forEach((dish, index) => {
             doc.text(dish, 10, yPosition); // Item name aligned left
-            doc.text(`₹${service.prices[index].toFixed(2)}`, 180, yPosition, { align: "right" }); // Price aligned right
+            doc.text(`Rs. ${service.prices[index].toFixed(2)}`, 180, yPosition, { align: "right" }); // Price aligned right
             yPosition += 10;
         });
 
         yPosition += 10; // Add some space before totals
         doc.setFontSize(14);
-        doc.text(`Total: ₹${total.toFixed(2)}`, 10, yPosition);
+        doc.text(`Total: Rs. ${total.toFixed(2)}`, 10, yPosition);
         yPosition += 10;
-        doc.text(`GST (18%): ₹${(total * 0.18).toFixed(2)}`, 10, yPosition);
+        doc.text(`GST (18%): Rs. ${(total * 0.18).toFixed(2)}`, 10, yPosition);
         yPosition += 10;
 
         doc.setFontSize(16);
         doc.setFont("bold");
-        doc.text(`Grand Total: ₹${grandTotal.toFixed(2)}`, 10, yPosition);
+        doc.text(`Grand Total: Rs. ${grandTotal.toFixed(2)}`, 10, yPosition);
 
         doc.save("bill.pdf");
     };
