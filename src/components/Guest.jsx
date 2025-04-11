@@ -19,7 +19,7 @@ export default function GuestForm() {
         e.preventDefault();
         try {
             const payload = { ...form, suggestedDishes: form.suggestedDishes.split(',').map((s) => s.trim()) };
-            const response = await fetch('http://localhost:8081/guest/submit', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/guest/submit`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -19,8 +19,8 @@ function OrganizerLogin() {
         try {
             setError('');
             const endpoint = isCreateMode
-                ? 'http://localhost:8081/organizer/create' // Endpoint for creating an event
-                : 'http://localhost:8081/organizer/submissions'; // Endpoint for viewing submissions
+                ? `${import.meta.env.VITE_BACKEND_URL}/organizer/create` // Endpoint for creating an event
+                : `${import.meta.env.VITE_BACKEND_URL}/organizer/submissions`; // Endpoint for viewing submissions
 
             const response = await fetch(endpoint, {
                 method: 'POST',
