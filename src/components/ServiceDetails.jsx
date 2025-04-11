@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const ServiceDetails = () => {
     const { id } = useParams();
     const [service, setService] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchService = async () => {
@@ -50,15 +51,18 @@ const ServiceDetails = () => {
                         <div className="p-5">
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">{dish}</h3>
                         </div>
-
-                        {/* Hover Effect */}
-                        {/* <div className="absolute inset-0 bg-transparent hover:bg-gray-200 bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                            <span className="text-black text-lg font-semibold opacity-0 hover:opacity-100 transition-opacity duration-300">
-                                View Details
-                            </span>
-                        </div> */}
                     </div>
                 ))}
+            </div>
+
+            {/* Get Bill Button */}
+            <div className="mt-8 text-center">
+                <button
+                    onClick={() => navigate(`/bill/${id}`)}
+                    className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700"
+                >
+                    Get Bill
+                </button>
             </div>
         </div>
     );

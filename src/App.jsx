@@ -9,6 +9,7 @@ import ServicesPage from './components/ServicesPage';
 import ServiceDetails from './components/ServiceDetails';
 import Login from './components/Login';
 import GuestSubmissions from './components/GuestSubmissions';
+import BillPage from './components/BillPage';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/service/:id" element={<ServiceDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/guest-submissions" element={<GuestSubmissions />} />
+          <Route path="/bill/:id" element={<BillPage />} />
         </Routes>
         <hr className="my-8 border-t-2 border-gray-300" />
         <Footer />
